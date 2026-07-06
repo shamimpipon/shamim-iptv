@@ -3,7 +3,11 @@
  * Shamim IPTV Gateway v2
  */
 
-export const ISP = {
+const ISP = {
+...
+}
+
+function detectISP(...)
 
   // MIR
   138004: "mir",
