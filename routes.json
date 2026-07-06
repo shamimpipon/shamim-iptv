@@ -1,11 +1,46 @@
 {
-  "default": "Channel.m3u",
-  "mir": "mir.m3u",
-  "amberit": "AmberIT.m3u",
-  "jadoo": "jadoo.m3u",
-  "gp": "mir.m3u",
-  "robi": "mir.m3u",
-  "airtel": "mir.m3u",
-  "banglalink": "mir.m3u",
-  "teletalk": "Channel.m3u"
+  "default": {
+    "playlist": "Channel.m3u",
+    "priority": 1
+  },
+
+  "mir": {
+    "playlist": "mir.m3u",
+    "priority": 1
+  },
+
+  "amberit": {
+    "playlist": "AmberIT.m3u",
+    "priority": 1
+  },
+
+  "jadoo": {
+    "playlist": "jadoo.m3u",
+    "priority": 1
+  },
+
+  "gp": {
+    "playlist": "mir.m3u",
+    "priority": 2
+  },
+
+  "robi": {
+    "playlist": "mir.m3u",
+    "priority": 2
+  },
+
+  "airtel": {
+    "playlist": "mir.m3u",
+    "priority": 2
+  },
+
+  "banglalink": {
+    "playlist": "mir.m3u",
+    "priority": 2
+  },
+
+  "teletalk": {
+    "playlist": "Channel.m3u",
+    "priority": 2
+  }
 }
