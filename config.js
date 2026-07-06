@@ -3,7 +3,9 @@
  * Configuration File
  */
 
-export const CONFIG = {
+const CONFIG = {
+   ...
+}
 
   // GitHub Pages (Primary Source)
   githubPages: "https://shamimpipon.github.io/Shamim-live-tv",
