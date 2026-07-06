@@ -5,29 +5,6 @@
  * Part-1
  * ===========================================
  */
-const CONFIG = {
-
-...
-
-};
-
-const ISP = {
-
-...
-
-};
-
-function detectISP(name){
-
-...
-
-}
-
-addEventListener("fetch",event=>{
-
-...
-
-});
 
 addEventListener("fetch", event => {
   event.respondWith(handleRequest(event.request));
