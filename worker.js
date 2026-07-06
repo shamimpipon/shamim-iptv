@@ -6,8 +6,6 @@
  * ===========================================
  */
 
-import { CONFIG } from "./config.js";
-import { ISP, detectISP } from "./isp.js";
 
 addEventListener("fetch", event => {
   event.respondWith(handleRequest(event.request));
