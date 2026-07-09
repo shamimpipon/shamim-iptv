@@ -1,0 +1,213 @@
+/**
+ * 🌐 SHAMIM IPTV - MASTER DASHBOARD (FIXED VERSION)
+ * ---------------------------------------------------
+ * Features: 
+ * 1. Visible Permanent Link (M3U8)
+ * 2. Smart Status Check (Green/Red Borders)
+ * 3. Bulk M3U Import (GitHub/M3U List Sync)
+ * 4. Manual Reordering (Auto-Shift Logic)
+ * 5. Built-in HLS Video Player
+ */
+
+export default {
+  async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    const pathname = url.pathname;
+    const workerURL = url.origin;
+    const DATABASE_KEY = "channeldata";
+
+    const cleanID = (str) => str.toLowerCase().replace(/[^a-z0-9]/g, '').trim();
+
+    // 1. Load Master Data from KV
+    let masterData = {};
+    try {
+      const rawData = await env.channeldata.get(DATABASE_KEY);
+      if (rawData) masterData = JSON.parse(rawData);
+    } catch (e) { console.error("KV Read Error"); }
+
+    // --- API: Live Status Check ---
+    if (pathname === "/check-status") {
+      const targetUrl = url.searchParams.get("url");
+      if (!targetUrl) return new Response("Error");
+      try {
+        const response = await fetch(targetUrl, {
+          method: "HEAD",
+          headers: { "User-Agent": "Mozilla/5.0" },
+          cf: { timeout: 3000 }
+        });
+        return new Response(response.ok ? "online" : "offline");
+      } catch (e) { return new Response("offline"); }
+    }
+
+    // 2. Admin Actions (POST)
+    if (request.method === "POST") {
+      const action = url.searchParams.get("action");
+
+      if (action === "bulk-save") {
+        try {
+          const newData = await request.json();
+          let currentKeys = Object.keys(masterData);
+          let nextOrder = currentKeys.length > 0 ? Math.max(...currentKeys.map(k => masterData[k].order || 0)) + 1 : 1;
+          for (const id in newData) {
+            if (masterData[id]) { masterData[id].url = newData[id].url; } 
+            else { masterData[id] = { ...newData[id], order: nextOrder++ }; }
+          }
+          await env.channeldata.put(DATABASE_KEY, JSON.stringify(masterData));
+          return new Response("Success");
+        } catch (e) { return new Response("Error", { status: 500 }); }
+      }
+
+      let oldId = url.searchParams.get("oldId"), newId = url.searchParams.get("newId");
+      if (action === "save") {
+        newId = cleanID(newId);
+        const name = url.searchParams.get("name"), streamUrl = url.searchParams.get("url"), targetOrder = parseInt(url.searchParams.get("order")) || 1;
+        if (newId && name && streamUrl) {
+          if (oldId && oldId !== newId) delete masterData[oldId];
+          let arr = Object.keys(masterData).map(k => ({id: k, ...masterData[k]})).filter(item => item.id !== newId).sort((a,b) => (a.order || 0) - (b.order || 0));
+          arr.splice(targetOrder - 1, 0, { id: newId, name, url: streamUrl, order: targetOrder });
+          let updated = {};
+          arr.forEach((item, index) => { updated[item.id] = { name: item.name, url: item.url, order: index + 1 }; });
+          await env.channeldata.put(DATABASE_KEY, JSON.stringify(updated));
+          return new Response("Success");
+        }
+      }
+
+      if (action === "delete" && oldId) {
+        delete masterData[oldId];
+        let arr = Object.keys(masterData).map(k => ({id: k, ...masterData[k]})).sort((a,b) => (a.order || 0) - (b.order || 0));
+        let updated = {};
+        arr.forEach((item, index) => { updated[item.id] = { name: item.name, url: item.url, order: index + 1 }; });
+        await env.channeldata.put(DATABASE_KEY, JSON.stringify(updated));
+        return new Response("Deleted");
+      }
+    }
+
+    // 3. Dashboard Interface (GET)
+    if (pathname === "/" || pathname === "/all") {
+      const sortedKeys = Object.keys(masterData).sort((a, b) => (masterData[a].order || 0) - (masterData[b].order || 0));
+      let html = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <title>SHAMIM IPTV | Master Pro</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+          <style>
+            :root { --bg: #0b0f19; --card: #161b2a; --accent: #3b82f6; --text: #e2e8f0; --input-bg: #1e293b; --success: #10b981; --danger: #ef4444; }
+            * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+            body { background: var(--bg); color: var(--text); margin: 0; padding: 10px; font-size: 14px; }
+            .navbar { background: rgba(22, 27, 42, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; padding: 12px 15px; border-radius: 12px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #1e293b; gap: 10px; }
+            .brand { font-size: 16px; font-weight: 800; color: white; text-transform: uppercase; white-space: nowrap; }
+            .brand span { color: var(--accent); }
+            .search-bar { flex-grow: 1; position: relative; max-width: 400px; }
+            .search-bar input { width: 100%; padding: 8px 12px 8px 35px; border-radius: 20px; border: 1px solid #2d3748; background: var(--input-bg); color: white; outline: none; font-size: 12px; }
+            .search-bar i { position: absolute; left: 12px; top: 10px; color: #718096; }
+            .top-btn { padding: 8px 12px; border-radius: 8px; border: none; font-weight: bold; cursor: pointer; font-size: 11px; color: white; transition: 0.2s; }
+            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+            .card { background: var(--card); border-radius: 12px; padding: 12px; border: 2px solid var(--accent); display: flex; flex-direction: column; transition: 0.3s; position: relative; }
+            .card.online { border-color: var(--success); }
+            .card.offline { border-color: var(--danger); }
+            .ch-header { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+            .serial-no { background: var(--accent); color: white; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 900; }
+            .ch-name { font-size: 11px; font-weight: 700; color: white; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-transform: uppercase; }
+            .label { font-size: 8px; color: #718096; font-weight: 800; text-transform: uppercase; margin: 8px 0 3px; display: block; }
+            .url-display { background: #0f172a; padding: 6px; border-radius: 6px; font-size: 9px; color: #94a3b8; border: 1px solid #2d3748; margin-bottom: 8px; word-break: break-all; min-height: 28px; font-family: monospace; }
+            .input-edit { width: 100%; padding: 6px; border-radius: 6px; border: 1px solid #2d3748; background: #1e293b; color: #fbbf24; font-size: 9px; margin-bottom: 5px; outline: none; }
+            .input-id { color: #10b981 !important; }
+            .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+            .btn-act { padding: 8px 2px; border: none; border-radius: 6px; font-size: 10px; font-weight: bold; cursor: pointer; color: white; text-align: center; }
+            .b-play { background: var(--success); grid-column: span 2; margin-bottom: 5px; }
+            .b-copy { background: #1e293b; border: 1px solid #2d3748; color: var(--accent); }
+            .b-save { background: var(--accent); }
+            .b-del { background: #331a1a; color: var(--danger); grid-column: span 2; margin-top: 5px; border: 1px solid #442222; }
+            #pModal, #modal, #importModal { display:none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:10000; align-items:center; justify-content:center; flex-direction: column; padding: 20px; }
+            .m-box { background:var(--card); padding:25px; border-radius:20px; width:100%; max-width:400px; border: 1px solid var(--accent); }
+            textarea { width: 100%; height: 180px; background: #0f172a; color: #10b981; border: 1px solid #2d3748; border-radius: 10px; padding: 10px; font-size: 11px; outline: none; }
+            #vContainer { width: 95%; max-width: 850px; aspect-ratio: 16/9; background: black; border: 2px solid var(--accent); border-radius: 15px; overflow: hidden; position: relative; }
+            video { width: 100%; height: 100%; }
+            @media (max-width: 480px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+          </style>
+        </head>
+        <body>
+          <div class="navbar">
+            <div class="brand">SHAMIM <span>IPTV</span></div>
+            <div class="search-bar"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="q" placeholder="Search..." onkeyup="doSearch()"></div>
+            <div style="display:flex; gap:5px;">
+              <button class="top-btn" style="background:var(--accent)" onclick="showImport()">Import</button>
+              <button class="top-btn" style="background:var(--success)" onclick="showAdd()">+ Add</button>
+            </div>
+          </div>
+          <div style="text-align:center; font-size:11px; margin-bottom:15px; color:#718096;">Status: <span id="statLog" style="color:var(--success)">Checking...</span> | Total: <b id="totalBadge">${sortedKeys.length}</b></div>
+          <div class="grid" id="mainGrid">
+      `;
+
+      for (const id of sortedKeys) {
+        const data = masterData[id];
+        const pLink = `${workerURL}/${id}.m3u8`;
+        html += `
+          <div class="card" id="card-${id}" data-n="${(data.name || id).toLowerCase()}" data-url="${data.url}">
+            <div class="ch-header">
+              <span class="serial-no">${data.order || 0}</span>
+              <span class="ch-name">${data.name || id}</span>
+            </div>
+            
+            <span class="label">Permanent Link</span>
+            <div class="url-display">${pLink}</div>
+
+            <span class="label">ID (Lowercase Only)</span>
+            <input type="text" id="id-${id}" value="${id}" class="input-edit input-id" spellcheck="false">
+            
+            <span class="label">Original Stream URL</span>
+            <input type="text" id="u-${id}" value="${data.url}" class="input-edit" spellcheck="false">
+            
+            <span class="label">Move Position</span>
+            <input type="number" id="o-${id}" value="${data.order || 0}" class="input-edit" style="width:50px;">
+            
+            <button class="btn-act b-play" onclick="play('${data.url}', '${data.name}')"><i class="fa-solid fa-play"></i> PLAY</button>
+            <div class="btn-group">
+              <button class="btn-act b-copy" onclick="cp('${pLink}', this)">Copy</button>
+              <button class="btn-act b-save" onclick="sv('${id}', '${data.name}')">Save</button>
+            </div>
+            <button class="btn-act b-del" onclick="dl('${id}')">Delete</button>
+          </div>
+        `;
+      }
+
+      html += `
+          </div>
+          <div id="pModal"><div id="vContainer"><span style="position:absolute;top:-35px;right:0;color:white;cursor:pointer;font-weight:bold;" onclick="stop()">CLOSE [X]</span><video id="video" controls autoplay></video></div><h3 id="pTitle" style="color:white;margin-top:15px;font-size:16px;"></h3></div>
+          <div id="importModal"><div class="m-box"><h3>Bulk Import M3U</h3><textarea id="m3uData" placeholder="#EXTINF list here..."></textarea><button class="btn-act b-save" style="width:100%;padding:15px;margin-top:10px;" onclick="processImport()">START IMPORT</button><button class="btn-act b-copy" style="width:100%;margin-top:5px;" onclick="document.getElementById('importModal').style.display='none'">CANCEL</button></div></div>
+          <div id="modal"><div class="m-box"><h3>Add New Channel</h3><input type="text" id="ni" placeholder="ID (btv-news)"><input type="text" id="nn" placeholder="Name"><input type="text" id="nu" placeholder="URL"><input type="number" id="no" placeholder="Serial (1)"><button class="btn-act b-save" style="width:100%;padding:15px;" onclick="ad()">CREATE</button></div></div>
+          <script>
+            function doSearch(){ let v=q.value.toLowerCase(), c=0; document.querySelectorAll('.card').forEach(card=>{ let match=card.getAttribute('data-n').includes(v); card.style.display=match?'flex':'none'; if(match)c++; }); totalBadge.innerText=c; }
+            async function checkAll(){ const cards=document.querySelectorAll('.card'); for(let i=0; i<cards.length; i++){ const url=cards[i].getAttribute('data-url'); if(!url)continue; try { const res=await fetch('/check-status?url='+encodeURIComponent(url)); const status=await res.text(); cards[i].classList.add(status==="online"?"online":"offline"); } catch(e){cards[i].classList.add('offline');} statLog.innerText="Checked "+(i+1)+"/"+cards.length; } statLog.innerText="All Verified ✅"; }
+            window.onload=checkAll;
+            let hls=new Hls();
+            function play(u,n){ pTitle.innerText=n; pModal.style.display='flex'; if(Hls.isSupported()){hls.loadSource(u);hls.attachMedia(video);}else if(video.canPlayType('application/vnd.apple.mpegurl')){video.src=u;} }
+            function stop(){ video.pause(); pModal.style.display='none'; hls.detachMedia(); }
+            function cp(t,b){ let e=document.createElement("textarea"); e.value=t; document.body.appendChild(e); e.select(); document.execCommand('copy'); document.body.removeChild(e); b.innerText='✅'; setTimeout(()=>b.innerText='Copy',1500); }
+            async function sv(i,n){ let ni=document.getElementById('id-'+i).value, u=document.getElementById('u-'+i).value, o=document.getElementById('o-'+i).value; await fetch('/?action=save&oldId='+i+'&newId='+ni+'&name='+encodeURIComponent(n)+'&url='+encodeURIComponent(u)+'&order='+o,{method:'POST'}); location.reload(); }
+            async function dl(i){ if(confirm('Delete?')){await fetch('/?action=delete&oldId='+i,{method:'POST'}); location.reload();} }
+            function showImport(){ importModal.style.display='flex'; }
+            function showAdd(){ modal.style.display='flex'; }
+            async function processImport(){ const lines=m3uData.value.split('\\n'), res={}; for(let i=0; i<lines.length; i++){ if(lines[i].trim().startsWith('#EXTINF')){ let n=lines[i].split(',').pop().trim(), u=lines[i+1]?lines[i+1].trim():""; if(n&&u.startsWith('http')){ let id=n.toLowerCase().replace(/[^a-z0-9]/g,''); res[id]={name:n,url:u}; } } } await fetch('/?action=bulk-save',{method:'POST',body:JSON.stringify(res)}); location.reload(); }
+            async function ad(){ let i=ni.value, n=nn.value, u=nu.value, o=no.value; if(i&&n&&u){await fetch('/?action=save&newId='+i+'&name='+encodeURIComponent(n)+'&url='+encodeURIComponent(u)+'&order='+o,{method:'POST'}); location.reload();} }
+          </script>
+        </body></html>
+      `;
+      return new Response(html, { headers: { "Content-Type": "text/html;charset=UTF-8" } });
+    }
+
+    const rawId = pathname.replace("/", "").replace(".m3u8", "").trim();
+    const cleanIncomingId = cleanID(rawId);
+    let match = masterData[cleanIncomingId];
+    if (!match) {
+        const foundKey = Object.keys(masterData).find(k => cleanID(k) === cleanIncomingId);
+        if (foundKey) match = masterData[foundKey];
+    }
+    if (match) return Response.redirect(match.url, 302);
+    return new Response("Not Found", { status: 404 });
+  }
+};
