@@ -127,13 +127,32 @@
         padding: 0 24px 40px;
         overflow-x: auto;
       }
-      a.btn {
+      .btn {
         background: var(--accent);
         color: white;
         text-decoration: none;
         padding: 8px 14px;
         border-radius: 8px;
         font-size: 13px;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+      }
+      .trigger {
+        display: flex;
+        gap: 10px;
+        padding: 0 24px 16px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .trigger input {
+        flex: 1;
+        min-width: 220px;
+      }
+      .triggerStatus {
+        padding: 0 24px 10px;
+        font-size: 12px;
+        color: var(--muted);
       }
       .url-cell {
         max-width: 320px;
@@ -171,6 +190,22 @@
         <option value="name-asc">Sort: Name (A → Z)</option>
       </select>
     </div>
+
+    <div class="trigger">
+      <input
+        id="triggerUrl"
+        type="text"
+        placeholder="🔗 M3U/M3U8 প্লেলিস্ট URL পেস্ট করো (একাধিক হলে কমা দিয়ে)"
+      />
+      <input
+        id="ghToken"
+        type="password"
+        placeholder="🔑 GitHub token (একবার দিলে ব্রাউজারে সেভ থাকবে)"
+      />
+      <button id="triggerBtn" class="btn" type="button">চেক করো</button>
+      <button id="refreshBtn" class="btn" type="button">রিফ্রেশ</button>
+    </div>
+    <div class="triggerStatus" id="triggerStatus"></div>
 
     <div class="wrap">
       <table>
@@ -294,6 +329,73 @@
       ["search", "statusFilter", "groupFilter", "sortBy"].forEach((id) =>
         document.getElementById(id).addEventListener("input", render),
       );
+
+      // --- Manual trigger via GitHub Actions API ---
+      const REPO = "shamimpipon/shamim-iptv";
+      const WORKFLOW_FILE = "check.yml";
+      const tokenInput = document.getElementById("ghToken");
+      const savedToken = localStorage.getItem("iptv_gh_token");
+      if (savedToken) tokenInput.value = savedToken;
+
+      async function triggerCheck() {
+        const url = document.getElementById("triggerUrl").value.trim();
+        const token = tokenInput.value.trim();
+        const statusEl = document.getElementById("triggerStatus");
+        if (!url) {
+          statusEl.textContent = "একটা প্লেলিস্ট URL লিখো।";
+          return;
+        }
+        if (!token) {
+          statusEl.textContent = "GitHub token লিখো (নিচে নির্দেশনা দেখো)।";
+          return;
+        }
+        localStorage.setItem("iptv_gh_token", token);
+        statusEl.textContent = "ট্রিগার করা হচ্ছে...";
+        try {
+          const res = await fetch(
+            `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`,
+            {
+              method: "POST",
+              headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: "application/vnd.github+json",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                ref: "main",
+                inputs: { playlist_url: url },
+              }),
+            },
+          );
+          if (res.status === 204) {
+            statusEl.textContent =
+              "✅ চেক শুরু হয়েছে! প্রায় ৩০-৬০ সেকেন্ড পর 'রিফ্রেশ' বাটনে চাপো।";
+          } else {
+            const body = await res.text();
+            statusEl.textContent = `❌ Error (${res.status}): ${body}`;
+          }
+        } catch (err) {
+          statusEl.textContent = `❌ ব্যর্থ: ${err.message}`;
+        }
+      }
+
+      document
+        .getElementById("triggerBtn")
+        .addEventListener("click", triggerCheck);
+      document.getElementById("refreshBtn").addEventListener("click", () => {
+        const statusEl = document.getElementById("triggerStatus");
+        fetch(`${DATA_URL}?t=${Date.now()}`)
+          .then((r) => r.json())
+          .then((data) => {
+            allResults = data.results;
+            renderSummaryAndFilters(data);
+            render();
+            statusEl.textContent = "রিজাল্ট রিফ্রেশ হয়েছে।";
+          })
+          .catch((err) => {
+            statusEl.textContent = "রিফ্রেশ ব্যর্থ: " + err.message;
+          });
+      });
     </script>
   </body>
 </html>
