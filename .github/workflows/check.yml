@@ -1,12 +1,15 @@
 name: IPTV Playlist Checker
 
 on:
+  push:
+    paths:
+      - "playlists.txt"
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       playlist_url:
-        description: "Playlist URL or path to check (optional, overrides playlists.txt)"
+        description: "One or more playlist URLs, comma-separated (optional, overrides playlists.txt)"
         required: false
         default: ""
 
@@ -29,9 +32,23 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Run checker (manual URL)
+      - name: Run checker (manual URLs)
         if: ${{ github.event.inputs.playlist_url != '' }}
-        run: node index.js --input "${{ github.event.inputs.playlist_url }}" --output ./output --concurrency 30
+        env:
+          PLAYLIST_URLS: ${{ github.event.inputs.playlist_url }}
+        run: |
+          args=()
+          while IFS= read -r line || [ -n "$line" ]; do
+            url="$(echo "$line" | xargs)"
+            [[ -z "$url" ]] && continue
+            echo "Checking source: $url"
+            args+=(--input "$url")
+          done < <(echo "$PLAYLIST_URLS" | tr ',' '\n')
+          if [ ${#args[@]} -eq 0 ]; then
+            echo "No playlist URL provided."
+            exit 1
+          fi
+          node index.js "${args[@]}" --output ./output --concurrency 30
 
       - name: Run checker (playlists.txt)
         if: ${{ github.event.inputs.playlist_url == '' }}
