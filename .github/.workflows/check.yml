@@ -1,0 +1,57 @@
+name: IPTV Playlist Checker
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      playlist_url:
+        description: "Playlist URL or path to check (optional, overrides playlists.txt)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: iptv-checker
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run checker (manual URL)
+        if: ${{ github.event.inputs.playlist_url != '' }}
+        run: node index.js --input "${{ github.event.inputs.playlist_url }}" --output ./output --concurrency 30
+
+      - name: Run checker (playlists.txt)
+        if: ${{ github.event.inputs.playlist_url == '' }}
+        run: |
+          args=()
+          while IFS= read -r line || [ -n "$line" ]; do
+            [[ -z "$line" || "$line" == \#* ]] && continue
+            echo "Checking source: $line"
+            args+=(--input "$line")
+          done < playlists.txt
+          if [ ${#args[@]} -eq 0 ]; then
+            echo "No playlist sources found in playlists.txt. Add at least one URL."
+            exit 1
+          fi
+          node index.js "${args[@]}" --output ./output --concurrency 30
+
+      - name: Commit results
+        run: |
+          git config user.name "iptv-checker-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add output/results.json output/working.m3u output/best_working.m3u
+          git diff --staged --quiet || git commit -m "chore: update IPTV check results [skip ci]"
+          git push
