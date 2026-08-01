@@ -1,14 +1,13 @@
 {
-  "generatedAt": "2026-08-01T12:00:00.243Z",
-  "durationMs": 39509,
+  "generatedAt": "2026-08-01T13:18:02.119Z",
+  "durationMs": 41064,
   "totalChecked": 153,
   "summary": {
-    "invalid_playlist": 39,
-    "timeout": 2,
+    "invalid_playlist": 35,
+    "timeout": 11,
     "offline": 29,
     "forbidden": 17,
-    "online": 64,
-    "unstable": 2
+    "online": 61
   },
   "results": [
     {
@@ -22,9 +21,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1576,
-      "score": 8,
-      "lastChecked": "2026-08-01T11:59:25.877Z"
+      "latencyMs": 1296,
+      "score": 9,
+      "lastChecked": "2026-08-01T13:17:25.930Z"
     },
     {
       "name": "Steelbird Music (720p) [Not 24/7]",
@@ -36,9 +35,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 1570,
-      "score": 8,
-      "lastChecked": "2026-08-01T11:59:25.766Z"
+      "latencyMs": 1069,
+      "score": 10,
+      "lastChecked": "2026-08-01T13:17:25.435Z"
     },
     {
       "name": "Music Bangla 2025",
@@ -46,14 +45,13 @@
       "group": "Music",
       "tvgId": null,
       "logo": "http://data.jaagobd.com/media/channel_logos/Noboruptvnew.jpeg",
-      "status": "invalid_playlist",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "hlsReason": "unreachable_manifest",
-      "latencyMs": 981,
-      "score": 11,
-      "lastChecked": "2026-08-01T11:59:24.536Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16002,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:17:53.561Z"
     },
     {
       "name": "ATN Music",
@@ -66,9 +64,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 822,
+      "latencyMs": 873,
       "score": 11,
-      "lastChecked": "2026-08-01T11:59:24.108Z"
+      "lastChecked": "2026-08-01T13:17:23.604Z"
     },
     {
       "name": "9X-Jalwa",
@@ -82,7 +80,7 @@
       "type": "unknown",
       "latencyMs": 16001,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:53.239Z"
+      "lastChecked": "2026-08-01T13:17:53.562Z"
     },
     {
       "name": "Sony Entertainmnt HD",
@@ -94,9 +92,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 522,
+      "latencyMs": 534,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:23.156Z"
+      "lastChecked": "2026-08-01T13:17:23.068Z"
     },
     {
       "name": "9XM (1080p)",
@@ -109,9 +107,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 3965,
-      "score": 0,
-      "lastChecked": "2026-08-01T11:59:28.937Z"
+      "latencyMs": 2563,
+      "score": 3,
+      "lastChecked": "2026-08-01T13:17:28.350Z"
     },
     {
       "name": "9X Jalwa (1080p)",
@@ -123,9 +121,9 @@
       "httpStatus": 403,
       "contentType": "application/xml",
       "type": "unknown",
-      "latencyMs": 464,
+      "latencyMs": 743,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:23.290Z"
+      "lastChecked": "2026-08-01T13:17:23.594Z"
     },
     {
       "name": "IN | Calcutta News",
@@ -140,9 +138,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 3752,
-      "score": 62,
-      "lastChecked": "2026-08-01T11:59:24.493Z"
+      "latencyMs": 3427,
+      "score": 63,
+      "lastChecked": "2026-08-01T13:17:24.491Z"
     },
     {
       "name": "IN | R Plus News",
@@ -157,9 +155,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 3668,
-      "score": 62,
-      "lastChecked": "2026-08-01T11:59:24.410Z"
+      "latencyMs": 3209,
+      "score": 64,
+      "lastChecked": "2026-08-01T13:17:24.274Z"
     },
     {
       "name": "IN | TV9 Bangla",
@@ -174,9 +172,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 3034,
-      "score": 65,
-      "lastChecked": "2026-08-01T11:59:23.776Z"
+      "latencyMs": 2430,
+      "score": 68,
+      "lastChecked": "2026-08-01T13:17:23.496Z"
     },
     {
       "name": "NEWS | Aaj Tak HD",
@@ -191,9 +189,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1374,
-      "score": 74,
-      "lastChecked": "2026-08-01T11:59:22.117Z"
+      "latencyMs": 6180,
+      "score": 50,
+      "lastChecked": "2026-08-01T13:17:27.247Z"
     },
     {
       "name": "NEWS | India TV",
@@ -208,9 +206,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2044,
-      "score": 70,
-      "lastChecked": "2026-08-01T11:59:22.788Z"
+      "latencyMs": 1360,
+      "score": 74,
+      "lastChecked": "2026-08-01T13:17:22.428Z"
     },
     {
       "name": "NEWS | News24",
@@ -225,9 +223,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2955,
-      "score": 66,
-      "lastChecked": "2026-08-01T11:59:23.699Z"
+      "latencyMs": 1407,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:22.476Z"
     },
     {
       "name": "NEWS | Republic TV",
@@ -242,9 +240,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2943,
-      "score": 66,
-      "lastChecked": "2026-08-01T11:59:23.687Z"
+      "latencyMs": 1773,
+      "score": 72,
+      "lastChecked": "2026-08-01T13:17:22.843Z"
     },
     {
       "name": "NEWS | Aap Ki Adalat",
@@ -259,9 +257,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 6266,
-      "score": 50,
-      "lastChecked": "2026-08-01T11:59:27.011Z"
+      "latencyMs": 5583,
+      "score": 53,
+      "lastChecked": "2026-08-01T13:17:26.654Z"
     },
     {
       "name": "NEWS | India Today",
@@ -276,9 +274,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2500,
-      "score": 68,
-      "lastChecked": "2026-08-01T11:59:23.246Z"
+      "latencyMs": 1905,
+      "score": 71,
+      "lastChecked": "2026-08-01T13:17:22.976Z"
     },
     {
       "name": "Music Mastii",
@@ -290,9 +288,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 417,
-      "score": 13,
-      "lastChecked": "2026-08-01T11:59:23.485Z"
+      "latencyMs": 623,
+      "score": 12,
+      "lastChecked": "2026-08-01T13:17:23.474Z"
     },
     {
       "name": "B4U music",
@@ -305,9 +303,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1336,
-      "score": 9,
-      "lastChecked": "2026-08-01T11:59:25.262Z"
+      "latencyMs": 1125,
+      "score": 10,
+      "lastChecked": "2026-08-01T13:17:25.153Z"
     },
     {
       "name": "Zoom",
@@ -320,9 +318,9 @@
       "contentType": "text/html",
       "type": "hls",
       "hlsReason": "not_m3u8",
-      "latencyMs": 1871,
-      "score": 6,
-      "lastChecked": "2026-08-01T11:59:27.600Z"
+      "latencyMs": 2169,
+      "score": 5,
+      "lastChecked": "2026-08-01T13:17:27.705Z"
     },
     {
       "name": "Music India",
@@ -335,9 +333,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1048,
+      "latencyMs": 1021,
       "score": 10,
-      "lastChecked": "2026-08-01T11:59:24.819Z"
+      "lastChecked": "2026-08-01T13:17:25.106Z"
     },
     {
       "name": "Music India",
@@ -352,9 +350,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1762,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:22.510Z"
+      "latencyMs": 1498,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:22.573Z"
     },
     {
       "name": "yrf Music",
@@ -369,9 +367,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 4439,
-      "score": 58,
-      "lastChecked": "2026-08-01T11:59:25.188Z"
+      "latencyMs": 3644,
+      "score": 62,
+      "lastChecked": "2026-08-01T13:17:24.719Z"
     },
     {
       "name": "Nikki HD",
@@ -383,9 +381,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 76,
+      "latencyMs": 173,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:22.482Z"
+      "lastChecked": "2026-08-01T13:17:22.602Z"
     },
     {
       "name": "Funny Junior HD",
@@ -397,9 +395,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 120,
+      "latencyMs": 184,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:22.573Z"
+      "lastChecked": "2026-08-01T13:17:22.621Z"
     },
     {
       "name": "Duronto",
@@ -414,9 +412,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 1822,
-      "score": 71,
-      "lastChecked": "2026-08-01T11:59:22.572Z"
+      "latencyMs": 2130,
+      "score": 70,
+      "lastChecked": "2026-08-01T13:17:23.207Z"
     },
     {
       "name": "Cartoon Network",
@@ -431,9 +429,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 3046,
-      "score": 65,
-      "lastChecked": "2026-08-01T11:59:23.796Z"
+      "latencyMs": 3338,
+      "score": 64,
+      "lastChecked": "2026-08-01T13:17:24.415Z"
     },
     {
       "name": "Mr Bean Animated",
@@ -448,9 +446,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2543,
-      "score": 68,
-      "lastChecked": "2026-08-01T11:59:23.294Z"
+      "latencyMs": 1577,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:22.655Z"
     },
     {
       "name": "Sony Yay",
@@ -462,9 +460,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 61,
+      "latencyMs": 167,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:22.589Z"
+      "lastChecked": "2026-08-01T13:17:22.620Z"
     },
     {
       "name": "Nicktoons",
@@ -479,9 +477,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1974,
-      "score": 71,
-      "lastChecked": "2026-08-01T11:59:22.726Z"
+      "latencyMs": 1176,
+      "score": 75,
+      "lastChecked": "2026-08-01T13:17:22.255Z"
     },
     {
       "name": "Oggy and the Cockroaches",
@@ -496,9 +494,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 831,
-      "score": 76,
-      "lastChecked": "2026-08-01T11:59:22.948Z"
+      "latencyMs": 730,
+      "score": 77,
+      "lastChecked": "2026-08-01T13:17:22.986Z"
     },
     {
       "name": "Bantul The Great",
@@ -513,9 +511,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 247,
-      "score": 79,
-      "lastChecked": "2026-08-01T11:59:22.729Z"
+      "latencyMs": 692,
+      "score": 77,
+      "lastChecked": "2026-08-01T13:17:23.120Z"
     },
     {
       "name": "0. Doraemon",
@@ -527,9 +525,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 891,
-      "score": 11,
-      "lastChecked": "2026-08-01T11:59:24.503Z"
+      "latencyMs": 656,
+      "score": 12,
+      "lastChecked": "2026-08-01T13:17:24.561Z"
     },
     {
       "name": "PARTY UNIVERSE",
@@ -541,9 +539,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 105,
+      "latencyMs": 22,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:23.198Z"
+      "lastChecked": "2026-08-01T13:17:23.384Z"
     },
     {
       "name": "ZB Cartun TV",
@@ -551,16 +549,16 @@
       "group": "Kids",
       "tvgId": null,
       "logo": "https://iili.io/F8gQjJS.png",
-      "status": "unstable",
+      "status": "online",
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "segmentsChecked": 2,
-      "segmentsReachable": 1,
+      "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 5086,
-      "score": 22,
-      "lastChecked": "2026-08-01T11:59:27.659Z"
+      "latencyMs": 3795,
+      "score": 62,
+      "lastChecked": "2026-08-01T13:17:26.397Z"
     },
     {
       "name": "Rongeen",
@@ -575,9 +573,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1993,
-      "score": 71,
-      "lastChecked": "2026-08-01T11:59:24.582Z"
+      "latencyMs": 1481,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:24.101Z"
     },
     {
       "name": "Love Natural",
@@ -589,9 +587,9 @@
       "httpStatus": 403,
       "contentType": "",
       "type": "unknown",
-      "latencyMs": 756,
+      "latencyMs": 759,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:24.987Z"
+      "lastChecked": "2026-08-01T13:17:24.902Z"
     },
     {
       "name": "Discovery Kids",
@@ -606,9 +604,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2982,
-      "score": 66,
-      "lastChecked": "2026-08-01T11:59:25.711Z"
+      "latencyMs": 3465,
+      "score": 63,
+      "lastChecked": "2026-08-01T13:17:26.120Z"
     },
     {
       "name": "0. Toon Goggles",
@@ -621,9 +619,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 892,
-      "score": 11,
-      "lastChecked": "2026-08-01T11:59:25.027Z"
+      "latencyMs": 632,
+      "score": 12,
+      "lastChecked": "2026-08-01T13:17:24.604Z"
     },
     {
       "name": "disnep hd",
@@ -635,9 +633,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 1513,
-      "score": 8,
-      "lastChecked": "2026-08-01T11:59:26.850Z"
+      "latencyMs": 1898,
+      "score": 6,
+      "lastChecked": "2026-08-01T13:17:27.408Z"
     },
     {
       "name": "Motu Patlu",
@@ -654,7 +652,7 @@
       "hlsType": "media",
       "latencyMs": 522,
       "score": 78,
-      "lastChecked": "2026-08-01T11:59:23.678Z"
+      "lastChecked": "2026-08-01T13:17:23.508Z"
     },
     {
       "name": "Gopal Bhar TV",
@@ -669,9 +667,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 395,
-      "score": 79,
-      "lastChecked": "2026-08-01T11:59:23.593Z"
+      "latencyMs": 537,
+      "score": 78,
+      "lastChecked": "2026-08-01T13:17:23.605Z"
     },
     {
       "name": "0. Tom and Jerry 2",
@@ -684,9 +682,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 492,
-      "score": 13,
-      "lastChecked": "2026-08-01T11:59:24.527Z"
+      "latencyMs": 367,
+      "score": 14,
+      "lastChecked": "2026-08-01T13:17:24.330Z"
     },
     {
       "name": "Discovery",
@@ -699,9 +697,9 @@
       "contentType": "text/plain; charset=utf-8",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 415,
+      "latencyMs": 585,
       "score": 13,
-      "lastChecked": "2026-08-01T11:59:26.311Z"
+      "lastChecked": "2026-08-01T13:17:24.929Z"
     },
     {
       "name": "National Geographic",
@@ -713,9 +711,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 720,
+      "latencyMs": 653,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.076Z"
+      "lastChecked": "2026-08-01T13:17:25.071Z"
     },
     {
       "name": "Animal Planet",
@@ -727,9 +725,9 @@
       "httpStatus": 403,
       "contentType": "",
       "type": "unknown",
-      "latencyMs": 752,
+      "latencyMs": 770,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.494Z"
+      "lastChecked": "2026-08-01T13:17:25.528Z"
     },
     {
       "name": "STAR MOVIES HD",
@@ -741,9 +739,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 513,
+      "latencyMs": 566,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.153Z"
+      "lastChecked": "2026-08-01T13:17:25.092Z"
     },
     {
       "name": "Khushboo",
@@ -756,9 +754,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1113,
-      "score": 10,
-      "lastChecked": "2026-08-01T11:59:27.055Z"
+      "latencyMs": 886,
+      "score": 11,
+      "lastChecked": "2026-08-01T13:17:26.650Z"
     },
     {
       "name": "MNX-HD",
@@ -770,9 +768,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 146,
+      "latencyMs": 328,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:24.350Z"
+      "lastChecked": "2026-08-01T13:17:24.528Z"
     },
     {
       "name": "Colors HD",
@@ -785,9 +783,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 925,
-      "score": 11,
-      "lastChecked": "2026-08-01T11:59:28.960Z"
+      "latencyMs": 1422,
+      "score": 8,
+      "lastChecked": "2026-08-01T13:17:28.019Z"
     },
     {
       "name": "B4U Kadak",
@@ -802,9 +800,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2390,
-      "score": 69,
-      "lastChecked": "2026-08-01T11:59:26.166Z"
+      "latencyMs": 1946,
+      "score": 71,
+      "lastChecked": "2026-08-01T13:17:25.551Z"
     },
     {
       "name": "095. GOLDMINES",
@@ -817,9 +815,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1103,
-      "score": 10,
-      "lastChecked": "2026-08-01T11:59:26.551Z"
+      "latencyMs": 715,
+      "score": 12,
+      "lastChecked": "2026-08-01T13:17:26.319Z"
     },
     {
       "name": "EP TV",
@@ -827,16 +825,13 @@
       "group": "Hindi Movie",
       "tvgId": null,
       "logo": "https://pub-3fb1cc2150f14147985220b3653a34d1.r2.dev/1785519613722-59489091-EPTV-Logo-400x400.png",
-      "status": "online",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "segmentsChecked": 2,
-      "segmentsReachable": 2,
-      "hlsType": "master",
-      "latencyMs": 1418,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:25.526Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16003,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:17:56.778Z"
     },
     {
       "name": "R Plus Gold",
@@ -851,9 +846,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 3081,
-      "score": 65,
-      "lastChecked": "2026-08-01T11:59:27.431Z"
+      "latencyMs": 2852,
+      "score": 66,
+      "lastChecked": "2026-08-01T13:17:27.182Z"
     },
     {
       "name": "ENT | DD URDU",
@@ -868,9 +863,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2379,
-      "score": 69,
-      "lastChecked": "2026-08-01T11:59:26.789Z"
+      "latencyMs": 1614,
+      "score": 72,
+      "lastChecked": "2026-08-01T13:17:26.029Z"
     },
     {
       "name": "E24",
@@ -885,9 +880,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1750,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:26.243Z"
+      "latencyMs": 1473,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:25.964Z"
     },
     {
       "name": "Cineedge HD",
@@ -899,9 +894,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 16,
+      "latencyMs": 145,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.318Z"
+      "lastChecked": "2026-08-01T13:17:25.235Z"
     },
     {
       "name": "Uniques HD",
@@ -913,9 +908,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 14,
+      "latencyMs": 150,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.321Z"
+      "lastChecked": "2026-08-01T13:17:25.241Z"
     },
     {
       "name": "Superrix HD",
@@ -927,9 +922,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 21,
+      "latencyMs": 155,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.394Z"
+      "lastChecked": "2026-08-01T13:17:25.271Z"
     },
     {
       "name": "& Picture",
@@ -941,9 +936,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 48,
+      "latencyMs": 42,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.322Z"
+      "lastChecked": "2026-08-01T13:17:25.285Z"
     },
     {
       "name": "Gold Mines",
@@ -958,9 +953,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1755,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:26.574Z"
+      "latencyMs": 1280,
+      "score": 74,
+      "lastChecked": "2026-08-01T13:17:26.182Z"
     },
     {
       "name": "Gold Mines Bollywood",
@@ -975,9 +970,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1756,
+      "latencyMs": 1675,
       "score": 72,
-      "lastChecked": "2026-08-01T11:59:26.743Z"
+      "lastChecked": "2026-08-01T13:17:26.604Z"
     },
     {
       "name": "Star Plus",
@@ -989,9 +984,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
       "type": "hls",
-      "latencyMs": 1194,
-      "score": 10,
-      "lastChecked": "2026-08-01T11:59:33.492Z"
+      "latencyMs": 1320,
+      "score": 9,
+      "lastChecked": "2026-08-01T13:17:29.283Z"
     },
     {
       "name": "Sony Sab HD",
@@ -1003,9 +998,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 49,
+      "latencyMs": 22,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.676Z"
+      "lastChecked": "2026-08-01T13:17:25.651Z"
     },
     {
       "name": "Zee Anmol Cinema",
@@ -1020,9 +1015,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1753,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:26.906Z"
+      "latencyMs": 1472,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:26.578Z"
     },
     {
       "name": "096. Goldmines Movies",
@@ -1035,9 +1030,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1081,
+      "latencyMs": 1030,
       "score": 10,
-      "lastChecked": "2026-08-01T11:59:27.648Z"
+      "lastChecked": "2026-08-01T13:17:27.398Z"
     },
     {
       "name": "B4U Movie",
@@ -1052,9 +1047,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1989,
-      "score": 71,
-      "lastChecked": "2026-08-01T11:59:27.251Z"
+      "latencyMs": 1664,
+      "score": 72,
+      "lastChecked": "2026-08-01T13:17:26.899Z"
     },
     {
       "name": "Gold Mines Movie",
@@ -1069,9 +1064,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1500,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:26.818Z"
+      "latencyMs": 1670,
+      "score": 72,
+      "lastChecked": "2026-08-01T13:17:26.911Z"
     },
     {
       "name": "Shemaroo TV",
@@ -1084,9 +1079,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1052,
+      "latencyMs": 1014,
       "score": 10,
-      "lastChecked": "2026-08-01T11:59:28.361Z"
+      "lastChecked": "2026-08-01T13:17:28.062Z"
     },
     {
       "name": "Zee Bollywood",
@@ -1098,9 +1093,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 52,
+      "latencyMs": 19,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:25.920Z"
+      "lastChecked": "2026-08-01T13:17:25.827Z"
     },
     {
       "name": "Zee Action",
@@ -1115,9 +1110,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1506,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:26.900Z"
+      "latencyMs": 1268,
+      "score": 74,
+      "lastChecked": "2026-08-01T13:17:26.703Z"
     },
     {
       "name": "Sony Max HD",
@@ -1129,9 +1124,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 70,
+      "latencyMs": 23,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:26.109Z"
+      "lastChecked": "2026-08-01T13:17:26.077Z"
     },
     {
       "name": "Sony Max 2",
@@ -1143,9 +1138,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 46,
+      "latencyMs": 22,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:26.121Z"
+      "lastChecked": "2026-08-01T13:17:26.093Z"
     },
     {
       "name": "Shemarooenterta",
@@ -1160,9 +1155,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1751,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:27.427Z"
+      "latencyMs": 1485,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:27.136Z"
     },
     {
       "name": "Unite8-sports-2",
@@ -1177,9 +1172,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2029,
+      "latencyMs": 2127,
       "score": 70,
-      "lastChecked": "2026-08-01T11:59:27.740Z"
+      "lastChecked": "2026-08-01T13:17:27.954Z"
     },
     {
       "name": "SONY SPORTS 5 HD",
@@ -1191,9 +1186,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 1794,
-      "score": 7,
-      "lastChecked": "2026-08-01T11:59:29.198Z"
+      "latencyMs": 780,
+      "score": 12,
+      "lastChecked": "2026-08-01T13:17:28.696Z"
     },
     {
       "name": "SONY SPORTS 3 HD",
@@ -1208,9 +1203,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 7065,
+      "latencyMs": 8775,
       "score": 50,
-      "lastChecked": "2026-08-01T11:59:32.942Z"
+      "lastChecked": "2026-08-01T13:17:34.739Z"
     },
     {
       "name": "SONY SPORTS 2 HD",
@@ -1222,9 +1217,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 841,
+      "latencyMs": 847,
       "score": 11,
-      "lastChecked": "2026-08-01T11:59:28.366Z"
+      "lastChecked": "2026-08-01T13:17:29.068Z"
     },
     {
       "name": "SONY SPORTS 1HD",
@@ -1236,9 +1231,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 873,
-      "score": 11,
-      "lastChecked": "2026-08-01T11:59:28.984Z"
+      "latencyMs": 1133,
+      "score": 10,
+      "lastChecked": "2026-08-01T13:17:29.123Z"
     },
     {
       "name": "Star-select-2",
@@ -1250,9 +1245,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
       "type": "hls",
-      "latencyMs": 1151,
-      "score": 10,
-      "lastChecked": "2026-08-01T11:59:33.573Z"
+      "latencyMs": 5721,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:17:34.608Z"
     },
     {
       "name": "Star-select-1",
@@ -1265,9 +1260,9 @@
       "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1628,
-      "score": 7,
-      "lastChecked": "2026-08-01T11:59:34.109Z"
+      "latencyMs": 671,
+      "score": 12,
+      "lastChecked": "2026-08-01T13:17:28.889Z"
     },
     {
       "name": "Star-sports-2",
@@ -1279,9 +1274,9 @@
       "httpStatus": 403,
       "contentType": "",
       "type": "unknown",
-      "latencyMs": 1054,
+      "latencyMs": 1149,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:29.398Z"
+      "lastChecked": "2026-08-01T13:17:29.922Z"
     },
     {
       "name": "STAR SPORTS 1",
@@ -1293,9 +1288,9 @@
       "httpStatus": 403,
       "contentType": "",
       "type": "unknown",
-      "latencyMs": 1060,
+      "latencyMs": 1130,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:29.696Z"
+      "lastChecked": "2026-08-01T13:17:30.018Z"
     },
     {
       "name": "Citizen TV",
@@ -1303,16 +1298,13 @@
       "group": "Bangla",
       "tvgId": null,
       "logo": "https://pub-3fb1cc2150f14147985220b3653a34d1.r2.dev/1785519466115-0896d0e4-citigen_tv.jpeg",
-      "status": "online",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "segmentsChecked": 2,
-      "segmentsReachable": 2,
-      "hlsType": "master",
-      "latencyMs": 1928,
-      "score": 71,
-      "lastChecked": "2026-08-01T11:59:28.479Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16002,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:17:58.901Z"
     },
     {
       "name": "TEN SPORTS HD",
@@ -1327,9 +1319,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 7831,
+      "latencyMs": 10642,
       "score": 50,
-      "lastChecked": "2026-08-01T11:59:34.405Z"
+      "lastChecked": "2026-08-01T13:17:37.220Z"
     },
     {
       "name": "ten cricet",
@@ -1344,9 +1336,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 7219,
+      "latencyMs": 9155,
       "score": 50,
-      "lastChecked": "2026-08-01T11:59:33.962Z"
+      "lastChecked": "2026-08-01T13:17:35.759Z"
     },
     {
       "name": "Willow Sports",
@@ -1358,9 +1350,9 @@
       "httpStatus": 403,
       "contentType": "",
       "type": "unknown",
-      "latencyMs": 756,
+      "latencyMs": 757,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:28.801Z"
+      "lastChecked": "2026-08-01T13:17:28.673Z"
     },
     {
       "name": "Willow TV",
@@ -1373,9 +1365,9 @@
       "contentType": "application/x-mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1890,
-      "score": 6,
-      "lastChecked": "2026-08-01T11:59:31.285Z"
+      "latencyMs": 1448,
+      "score": 8,
+      "lastChecked": "2026-08-01T13:17:31.082Z"
     },
     {
       "name": "PTV",
@@ -1383,16 +1375,16 @@
       "group": "Sports",
       "tvgId": null,
       "logo": "https://pub-3fb1cc2150f14147985220b3653a34d1.r2.dev/PTV%20Sports.png",
-      "status": "unstable",
+      "status": "online",
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "segmentsChecked": 2,
-      "segmentsReachable": 1,
+      "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2259,
-      "score": 36,
-      "lastChecked": "2026-08-01T11:59:29.109Z"
+      "latencyMs": 2397,
+      "score": 69,
+      "lastChecked": "2026-08-01T13:17:29.100Z"
     },
     {
       "name": "A-sports",
@@ -1405,9 +1397,9 @@
       "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1279,
-      "score": 9,
-      "lastChecked": "2026-08-01T11:59:34.035Z"
+      "latencyMs": 6649,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:17:36.572Z"
     },
     {
       "name": "Green Tv",
@@ -1415,16 +1407,13 @@
       "group": "Bangla",
       "tvgId": null,
       "logo": "https://free.otapp.store/uploads/tv_image/sm/green-tv.png",
-      "status": "online",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "segmentsChecked": 2,
-      "segmentsReachable": 2,
-      "hlsType": "master",
-      "latencyMs": 1702,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:28.608Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16000,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:17:59.411Z"
     },
     {
       "name": "Euro TV",
@@ -1436,9 +1425,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 111,
+      "latencyMs": 100,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:27.741Z"
+      "lastChecked": "2026-08-01T13:17:28.131Z"
     },
     {
       "name": "T Sports HD",
@@ -1453,9 +1442,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 3504,
-      "score": 63,
-      "lastChecked": "2026-08-01T11:59:30.559Z"
+      "latencyMs": 4021,
+      "score": 60,
+      "lastChecked": "2026-08-01T13:17:31.203Z"
     },
     {
       "name": "Makkah TV",
@@ -1463,16 +1452,13 @@
       "group": "Bangla",
       "tvgId": null,
       "logo": "https://pub-3fb1cc2150f14147985220b3653a34d1.r2.dev/1784271933679-3462f0e9-93532.png",
-      "status": "online",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "segmentsChecked": 2,
-      "segmentsReachable": 2,
-      "hlsType": "master",
-      "latencyMs": 2116,
-      "score": 70,
-      "lastChecked": "2026-08-01T11:59:29.367Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16000,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:17:59.748Z"
     },
     {
       "name": "Sangsad",
@@ -1484,9 +1470,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 29,
+      "latencyMs": 23,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:27.998Z"
+      "lastChecked": "2026-08-01T13:17:27.938Z"
     },
     {
       "name": "Deshi TV",
@@ -1501,9 +1487,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1219,
-      "score": 74,
-      "lastChecked": "2026-08-01T11:59:28.650Z"
+      "latencyMs": 592,
+      "score": 78,
+      "lastChecked": "2026-08-01T13:17:28.000Z"
     },
     {
       "name": "Deshe Bideshe",
@@ -1518,9 +1504,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1214,
-      "score": 74,
-      "lastChecked": "2026-08-01T11:59:28.814Z"
+      "latencyMs": 562,
+      "score": 78,
+      "lastChecked": "2026-08-01T13:17:28.267Z"
     },
     {
       "name": "iON TV UK",
@@ -1535,9 +1521,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1110,
-      "score": 75,
-      "lastChecked": "2026-08-01T11:59:28.758Z"
+      "latencyMs": 763,
+      "score": 77,
+      "lastChecked": "2026-08-01T13:17:28.701Z"
     },
     {
       "name": "NRB HD",
@@ -1552,9 +1538,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 1322,
-      "score": 74,
-      "lastChecked": "2026-08-01T11:59:28.982Z"
+      "latencyMs": 1117,
+      "score": 75,
+      "lastChecked": "2026-08-01T13:17:29.071Z"
     },
     {
       "name": "Ayna TV",
@@ -1566,9 +1552,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 16001,
+      "latencyMs": 16000,
       "score": 0,
-      "lastChecked": "2026-08-01T12:00:00.242Z"
+      "lastChecked": "2026-08-01T13:18:00.500Z"
     },
     {
       "name": "q_75,f_webp/KECGB54BuUSiBsg_dHyj/posters/58af9c58-ed80-458c-af13-cf381680cec6.png\" group-title=\"Bangla\",Rajdhani TV",
@@ -1583,9 +1569,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 2542,
-      "score": 68,
-      "lastChecked": "2026-08-01T11:59:30.283Z"
+      "latencyMs": 2678,
+      "score": 67,
+      "lastChecked": "2026-08-01T13:17:30.697Z"
     },
     {
       "name": "Green TV",
@@ -1600,9 +1586,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 1631,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:29.629Z"
+      "latencyMs": 1010,
+      "score": 75,
+      "lastChecked": "2026-08-01T13:17:29.072Z"
     },
     {
       "name": "Jhankar.tv",
@@ -1617,9 +1603,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 950,
-      "score": 76,
-      "lastChecked": "2026-08-01T11:59:29.311Z"
+      "latencyMs": 257,
+      "score": 79,
+      "lastChecked": "2026-08-01T13:17:28.388Z"
     },
     {
       "name": "SA TV",
@@ -1634,9 +1620,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 4635,
-      "score": 57,
-      "lastChecked": "2026-08-01T11:59:33.001Z"
+      "latencyMs": 3407,
+      "score": 63,
+      "lastChecked": "2026-08-01T13:17:31.674Z"
     },
     {
       "name": "Bangla TV",
@@ -1651,9 +1637,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 3351,
-      "score": 64,
-      "lastChecked": "2026-08-01T11:59:31.830Z"
+      "latencyMs": 3554,
+      "score": 63,
+      "lastChecked": "2026-08-01T13:17:31.904Z"
     },
     {
       "name": "Boishakhi TV",
@@ -1668,9 +1654,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 3263,
-      "score": 64,
-      "lastChecked": "2026-08-01T11:59:31.871Z"
+      "latencyMs": 3510,
+      "score": 63,
+      "lastChecked": "2026-08-01T13:17:31.898Z"
     },
     {
       "name": "Mohona TV",
@@ -1682,9 +1668,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 46,
+      "latencyMs": 20,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:29.245Z"
+      "lastChecked": "2026-08-01T13:17:29.206Z"
     },
     {
       "name": "Movie Bangla",
@@ -1699,9 +1685,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1917,
+      "latencyMs": 1995,
       "score": 71,
-      "lastChecked": "2026-08-01T11:59:30.675Z"
+      "lastChecked": "2026-08-01T13:17:30.691Z"
     },
     {
       "name": "Channel S",
@@ -1709,16 +1695,13 @@
       "group": "Bangla",
       "tvgId": null,
       "logo": "https://i.postimg.cc/L6MvsdFm/20240822-231309.png",
-      "status": "online",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "segmentsChecked": 2,
-      "segmentsReachable": 2,
-      "hlsType": "master",
-      "latencyMs": 1377,
-      "score": 74,
-      "lastChecked": "2026-08-01T11:59:30.178Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16002,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:18:01.205Z"
     },
     {
       "name": "SRK TV",
@@ -1733,9 +1716,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2649,
-      "score": 67,
-      "lastChecked": "2026-08-01T11:59:31.463Z"
+      "latencyMs": 2994,
+      "score": 66,
+      "lastChecked": "2026-08-01T13:17:31.883Z"
     },
     {
       "name": "global TV",
@@ -1743,13 +1726,13 @@
       "group": "Bangla",
       "tvgId": null,
       "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/refs/heads/main/Global%20Television%20Bangladesh.png",
-      "status": "invalid_playlist",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "latencyMs": 842,
-      "score": 11,
-      "lastChecked": "2026-08-01T11:59:31.427Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16001,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:18:01.570Z"
     },
     {
       "name": "Ekhon",
@@ -1764,9 +1747,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 1569,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:30.529Z"
+      "latencyMs": 2123,
+      "score": 70,
+      "lastChecked": "2026-08-01T13:17:31.194Z"
     },
     {
       "name": "Bijoy TV",
@@ -1778,9 +1761,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 51,
+      "latencyMs": 21,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:29.584Z"
+      "lastChecked": "2026-08-01T13:17:29.613Z"
     },
     {
       "name": "Asian TV",
@@ -1795,9 +1778,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 1412,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:30.396Z"
+      "latencyMs": 2025,
+      "score": 70,
+      "lastChecked": "2026-08-01T13:17:31.125Z"
     },
     {
       "name": "NTV",
@@ -1809,9 +1792,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 101,
+      "latencyMs": 63,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:29.816Z"
+      "lastChecked": "2026-08-01T13:17:29.781Z"
     },
     {
       "name": "SA TV",
@@ -1823,9 +1806,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 58,
+      "latencyMs": 73,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:29.837Z"
+      "lastChecked": "2026-08-01T13:17:29.836Z"
     },
     {
       "name": "MY TV",
@@ -1833,13 +1816,13 @@
       "group": "Bangla",
       "tvgId": null,
       "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/refs/heads/main/My%20TV.svg.png",
-      "status": "invalid_playlist",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "latencyMs": 871,
-      "score": 11,
-      "lastChecked": "2026-08-01T11:59:31.758Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16001,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:18:01.785Z"
     },
     {
       "name": "R tv",
@@ -1847,13 +1830,13 @@
       "group": "Bangla",
       "tvgId": null,
       "logo": "https://raw.githubusercontent.com/subirkumarpaul/Logo/refs/heads/main/RTV.png",
-      "status": "invalid_playlist",
-      "httpStatus": 200,
-      "contentType": "application/vnd.apple.mpegurl",
-      "type": "hls",
-      "latencyMs": 1271,
-      "score": 9,
-      "lastChecked": "2026-08-01T11:59:32.282Z"
+      "status": "timeout",
+      "httpStatus": null,
+      "contentType": null,
+      "type": "unknown",
+      "latencyMs": 16003,
+      "score": 0,
+      "lastChecked": "2026-08-01T13:18:02.118Z"
     },
     {
       "name": "ME TV",
@@ -1868,9 +1851,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 2823,
-      "score": 66,
-      "lastChecked": "2026-08-01T11:59:32.190Z"
+      "latencyMs": 2658,
+      "score": 67,
+      "lastChecked": "2026-08-01T13:17:32.439Z"
     },
     {
       "name": "Banglavison",
@@ -1882,9 +1865,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 94,
+      "latencyMs": 49,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.143Z"
+      "lastChecked": "2026-08-01T13:17:30.511Z"
     },
     {
       "name": "Maasranga",
@@ -1896,9 +1879,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 120,
+      "latencyMs": 75,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.302Z"
+      "lastChecked": "2026-08-01T13:17:30.560Z"
     },
     {
       "name": "Desh TV",
@@ -1910,9 +1893,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 84,
+      "latencyMs": 54,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.305Z"
+      "lastChecked": "2026-08-01T13:17:30.653Z"
     },
     {
       "name": "Channel i",
@@ -1924,9 +1907,9 @@
       "httpStatus": 404,
       "contentType": "",
       "type": "unknown",
-      "latencyMs": 751,
+      "latencyMs": 1570,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:32.368Z"
+      "lastChecked": "2026-08-01T13:17:33.406Z"
     },
     {
       "name": "Channel 9",
@@ -1938,9 +1921,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 53,
+      "latencyMs": 75,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.477Z"
+      "lastChecked": "2026-08-01T13:17:31.201Z"
     },
     {
       "name": "ATN Bangla",
@@ -1953,9 +1936,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1437,
-      "score": 8,
-      "lastChecked": "2026-08-01T11:59:32.746Z"
+      "latencyMs": 865,
+      "score": 11,
+      "lastChecked": "2026-08-01T13:17:33.144Z"
     },
     {
       "name": "News 24",
@@ -1967,9 +1950,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 85,
+      "latencyMs": 63,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.806Z"
+      "lastChecked": "2026-08-01T13:17:31.331Z"
     },
     {
       "name": "INDEPENDENT TV",
@@ -1981,9 +1964,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 83,
+      "latencyMs": 47,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.876Z"
+      "lastChecked": "2026-08-01T13:17:31.310Z"
     },
     {
       "name": "ATN NEWS",
@@ -1995,9 +1978,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 132,
+      "latencyMs": 73,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:31.024Z"
+      "lastChecked": "2026-08-01T13:17:31.723Z"
     },
     {
       "name": "Channel 1",
@@ -2009,9 +1992,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 51,
+      "latencyMs": 77,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.944Z"
+      "lastChecked": "2026-08-01T13:17:31.752Z"
     },
     {
       "name": "Star News",
@@ -2023,9 +2006,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 81,
+      "latencyMs": 64,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:30.945Z"
+      "lastChecked": "2026-08-01T13:17:31.818Z"
     },
     {
       "name": "DBC News",
@@ -2037,9 +2020,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 105,
+      "latencyMs": 155,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:31.056Z"
+      "lastChecked": "2026-08-01T13:17:31.932Z"
     },
     {
       "name": "EKTTOR tv",
@@ -2051,9 +2034,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 253,
+      "latencyMs": 79,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:31.315Z"
+      "lastChecked": "2026-08-01T13:17:31.826Z"
     },
     {
       "name": "Somoy tv",
@@ -2065,9 +2048,9 @@
       "httpStatus": 404,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "unknown",
-      "latencyMs": 760,
+      "latencyMs": 1111,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:32.749Z"
+      "lastChecked": "2026-08-01T13:17:34.010Z"
     },
     {
       "name": "Jamuna TV",
@@ -2079,9 +2062,9 @@
       "httpStatus": null,
       "contentType": null,
       "type": "unknown",
-      "latencyMs": 10,
+      "latencyMs": 162,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:31.076Z"
+      "lastChecked": "2026-08-01T13:17:32.008Z"
     },
     {
       "name": "BTV",
@@ -2093,9 +2076,9 @@
       "httpStatus": 404,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "unknown",
-      "latencyMs": 962,
+      "latencyMs": 847,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:33.000Z"
+      "lastChecked": "2026-08-01T13:17:33.913Z"
     },
     {
       "name": "Nagorik",
@@ -2110,9 +2093,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 1593,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:32.399Z"
+      "latencyMs": 1859,
+      "score": 71,
+      "lastChecked": "2026-08-01T13:17:33.582Z"
     },
     {
       "name": "Gtv",
@@ -2127,9 +2110,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 2038,
+      "latencyMs": 2124,
       "score": 70,
-      "lastChecked": "2026-08-01T11:59:32.914Z"
+      "lastChecked": "2026-08-01T13:17:33.876Z"
     },
     {
       "name": "Bangla Plus",
@@ -2144,9 +2127,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 2051,
-      "score": 70,
-      "lastChecked": "2026-08-01T11:59:32.995Z"
+      "latencyMs": 2536,
+      "score": 68,
+      "lastChecked": "2026-08-01T13:17:34.354Z"
     },
     {
       "name": "IN | Republic Bangla",
@@ -2161,9 +2144,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 3272,
-      "score": 64,
-      "lastChecked": "2026-08-01T11:59:34.217Z"
+      "latencyMs": 933,
+      "score": 76,
+      "lastChecked": "2026-08-01T13:17:32.759Z"
     },
     {
       "name": "আকাশ ৮",
@@ -2176,9 +2159,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1431,
-      "score": 8,
-      "lastChecked": "2026-08-01T11:59:35.292Z"
+      "latencyMs": 1216,
+      "score": 9,
+      "lastChecked": "2026-08-01T13:17:35.726Z"
     },
     {
       "name": "Sangeet Bangla",
@@ -2191,9 +2174,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 1036,
-      "score": 10,
-      "lastChecked": "2026-08-01T11:59:34.249Z"
+      "latencyMs": 858,
+      "score": 11,
+      "lastChecked": "2026-08-01T13:17:34.626Z"
     },
     {
       "name": "Sangeet Bangla",
@@ -2208,9 +2191,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1497,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:32.573Z"
+      "latencyMs": 1723,
+      "score": 72,
+      "lastChecked": "2026-08-01T13:17:33.627Z"
     },
     {
       "name": "Ruposhi Bangla",
@@ -2225,9 +2208,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "media",
-      "latencyMs": 1746,
-      "score": 72,
-      "lastChecked": "2026-08-01T11:59:33.031Z"
+      "latencyMs": 1466,
+      "score": 73,
+      "lastChecked": "2026-08-01T13:17:33.398Z"
     },
     {
       "name": "Ente10 Bangla",
@@ -2239,9 +2222,9 @@
       "httpStatus": 200,
       "contentType": "application/x-mpegurl",
       "type": "hls",
-      "latencyMs": 255,
-      "score": 14,
-      "lastChecked": "2026-08-01T11:59:32.756Z"
+      "latencyMs": 180,
+      "score": 15,
+      "lastChecked": "2026-08-01T13:17:33.578Z"
     },
     {
       "name": "Sony Aath",
@@ -2254,9 +2237,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 704,
-      "score": 12,
-      "lastChecked": "2026-08-01T11:59:33.338Z"
+      "latencyMs": 1046,
+      "score": 10,
+      "lastChecked": "2026-08-01T13:17:35.100Z"
     },
     {
       "name": "Sun Bangla",
@@ -2268,9 +2251,9 @@
       "httpStatus": 403,
       "contentType": "",
       "type": "unknown",
-      "latencyMs": 827,
+      "latencyMs": 803,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:33.871Z"
+      "lastChecked": "2026-08-01T13:17:35.103Z"
     },
     {
       "name": "জলসা Movie HD",
@@ -2282,9 +2265,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
-      "latencyMs": 1094,
-      "score": 10,
-      "lastChecked": "2026-08-01T11:59:34.691Z"
+      "latencyMs": 1596,
+      "score": 8,
+      "lastChecked": "2026-08-01T13:17:36.367Z"
     },
     {
       "name": "Colours Bangla Chinema",
@@ -2297,9 +2280,9 @@
       "contentType": "text/plain; charset=utf-8",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 2209,
-      "score": 4,
-      "lastChecked": "2026-08-01T11:59:37.212Z"
+      "latencyMs": 1699,
+      "score": 7,
+      "lastChecked": "2026-08-01T13:17:38.063Z"
     },
     {
       "name": "COLORS BANGLA HD",
@@ -2311,9 +2294,9 @@
       "httpStatus": 404,
       "contentType": "application/vnd.apple.mpegurl",
       "type": "unknown",
-      "latencyMs": 735,
+      "latencyMs": 829,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:33.861Z"
+      "lastChecked": "2026-08-01T13:17:35.564Z"
     },
     {
       "name": "Zee Bangla Chinena",
@@ -2326,9 +2309,9 @@
       "contentType": "application/vnd.apple.mpegurl",
       "type": "hls",
       "hlsReason": "unreachable_manifest",
-      "latencyMs": 138,
+      "latencyMs": 89,
       "score": 15,
-      "lastChecked": "2026-08-01T11:59:33.010Z"
+      "lastChecked": "2026-08-01T13:17:34.288Z"
     },
     {
       "name": "Zee Bangla",
@@ -2340,9 +2323,9 @@
       "httpStatus": 403,
       "contentType": "text/html; charset=utf-8",
       "type": "unknown",
-      "latencyMs": 124,
+      "latencyMs": 88,
       "score": 0,
-      "lastChecked": "2026-08-01T11:59:33.024Z"
+      "lastChecked": "2026-08-01T13:17:34.251Z"
     },
     {
       "name": "Star Jalsa",
@@ -2357,9 +2340,9 @@
       "segmentsChecked": 2,
       "segmentsReachable": 2,
       "hlsType": "master",
-      "latencyMs": 1589,
-      "score": 73,
-      "lastChecked": "2026-08-01T11:59:33.957Z"
+      "latencyMs": 1860,
+      "score": 71,
+      "lastChecked": "2026-08-01T13:17:35.487Z"
     },
     {
       "name": "T-Sports-BDIX",
@@ -2371,9 +2354,9 @@
       "httpStatus": 200,
       "contentType": "application/vnd.apple.mpegurl; charset=utf-8",
       "type": "hls",
-      "latencyMs": 1160,
-      "score": 10,
-      "lastChecked": "2026-08-01T11:59:35.696Z"
+      "latencyMs": 1297,
+      "score": 9,
+      "lastChecked": "2026-08-01T13:17:37.868Z"
     }
   ]
 }
